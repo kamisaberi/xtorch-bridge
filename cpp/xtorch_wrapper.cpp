@@ -1,6 +1,5 @@
 #include <torch/extension.h>
 #include <pybind11/stl.h>
-
 #include "xt/models/BaseModel.h"
 #include "xt/models/MLP.h"
 #include "xt/train/Trainer.h"
