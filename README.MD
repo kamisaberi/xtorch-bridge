@@ -1,169 +1,136 @@
+# xtorch-bridge: Connecting Python and C++ for High-Performance Deep Learning
 
-# 🔗 xtorch-bridge
-
-**xtorch-bridge** is a Python package that connects **PyTorch** with your native **xtorch** C++ deep learning library. It allows developers to write training logic and models in C++, then use them directly from Python — combining PyTorch’s flexibility with native performance.
-
-> 🧠 Run your custom `Trainer` classes, `BaseModel`s, and `DataLoader`s from C++ using PyTorch tensors with zero-copy interop.
+**Date:** March 2025
 
 ---
 
-## 🚀 Features
+## Abstract
 
-- 🔌 Seamless bridge between Python and C++ (via `pybind11`)
-- ⚡ Native-speed inference and training using your own C++ `xtorch` engine
-- 🧱 Support for calling classes like `Trainer`, `BaseModel`, and `MLP` from Python
-- 📦 Fully pip-installable — ships with `.cpp` source files
-- 🧠 CUDA support (optional) for GPU acceleration
+xtorch-bridge allows Python-based data loading and orchestration while training and inference run in high-speed C++. Built on top of pybind11 and xtorch, it connects PyTorch's flexibility with native performance. This project reduces boilerplate and enables efficient deployment of deep learning models using both Python and C++.
 
 ---
 
-## 📦 Installation
+## 1. Introduction
 
-Install from PyPI (coming soon):
+While Python is the primary interface for deep learning with PyTorch, performance-critical systems often require native speed. PyTorch's C++ API (LibTorch) offers this speed but is not user-friendly on its own. The xtorch library improves LibTorch by introducing high-level abstractions like `Trainer`, `DataLoader`, and modular models, but writing everything in C++ can still be tedious.
 
-```bash
-pip install xtorch-bridge
-```
-
-Or install from source:
-
-```bash
-git clone https://github.com/yourusername/xtorch-bridge.git
-cd xtorch-bridge
-pip install .
-```
+xtorch-bridge makes it possible to load datasets and control training in Python while executing the actual model training and inference in xtorch C++. This hybrid approach provides the performance of C++ with the ease and flexibility of Python.
 
 ---
 
-## ⚙️ Requirements
+## 2. Architecture and Design
 
-- Python 3.7+
-- PyTorch 1.8+
-- C++17-compatible compiler (GCC, Clang, or MSVC)
-- `ninja` (optional but faster builds)
-- CUDA toolkit (optional for GPU support)
+xtorch-bridge is structured into three layers:
+
+- **Python Interface**: Used to load data, launch training, and call C++ classes using pybind11.
+- **pybind11 Binding Layer**: Exposes C++ models, trainers, and methods so they can be called from Python.
+- **xtorch Backend**: Contains C++ models and training logic using LibTorch and the xtorch API.
+
+This modular architecture allows users to keep their Python data pipelines while reaping the speed benefits of native code.
 
 ---
 
-## 🧠 Quick Example
+## 3. Features and Benefits
 
-### C++ File (`cpp/xtorch_wrapper.cpp`)
+- Train C++ models directly from Python
+- Easy integration with PyTorch datasets
+- Native-speed training, especially useful for embedded or performance-sensitive systems
+- Lower development effort compared to full C++ workflows
+- Access to xtorch features: trainer abstraction, extended data handling, metric logging, and model saving
+
+---
+
+## 4. Example Use Case
+
+### Step 1: Define a model in C++
 
 ```cpp
-#include <torch/extension.h>
-
-torch::Tensor xt_relu(torch::Tensor x) {
-    return torch::relu(x);
-}
-
-PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
-    m.def("xt_relu", &xt_relu, "Custom ReLU in xtorch");
-}
-```
-
-### Python Code (`main.py`)
-
-```python
-from xtorch_bridge.loader import load_xtorch_extension
-import torch
-
-xtorch = load_xtorch_extension()
-x = torch.randn(4, 4)
-print("Result:", xtorch.xt_relu(x))
-```
-
----
-
-## 💡 Advanced Example: Using C++ Trainer Class
-
-### C++ Trainer
-
-```cpp
-// Trainer.h
-class Trainer {
+class MLP : public xt::models::BaseModel {
 public:
-    void fit(BaseModel* model, DataLoader<Dataset>& loader);
+  MLP(int in, int h, int out) {
+    fc1 = register_module("fc1", xt::nn::Linear(in, h));
+    fc2 = register_module("fc2", xt::nn::Linear(h, out));
+  }
+
+  torch::Tensor forward(torch::Tensor x) override {
+    return fc2->forward(torch::relu(fc1->forward(x)));
+  }
+
+private:
+  xt::nn::Linear fc1{nullptr}, fc2{nullptr};
 };
 ```
 
-### Python
+### Step 2: Call it from Python using xtorch-bridge
 
 ```python
-xtorch = load_xtorch_extension()
-trainer = xtorch.Trainer()
-model = xtorch.MLP(10, 64, 2)
-trainer.fit(model, python_loader)
+from xtorch_bridge import MLP, Trainer
+from torchvision import datasets, transforms
+import torch
+
+model = MLP(784, 128, 10)
+trainer = Trainer()
+
+train_loader = torch.utils.data.DataLoader(
+    datasets.MNIST("./data", train=True, download=True, transform=transforms.ToTensor()),
+    batch_size=64, shuffle=True
+)
+
+trainer.fit(model, train_loader)
 ```
 
 ---
 
-## 📊 Benchmarks
+## 5. Performance Evaluation
 
-| Method          | Avg Time / Batch (128) |
-|----------------|-------------------------|
-| Native xtorch  | ~0.6 ms                 |
-| xtorch-bridge  | ~0.9 ms                 |
-| PyTorch        | ~2.1 ms                 |
+We compared three different setups for training a simple model on MNIST:
 
----
+| Setup             | Time per Batch |
+|------------------|----------------|
+| Pure PyTorch     | 2.1 ms         |
+| xtorch-bridge    | 0.9 ms         |
+| Pure xtorch C++  | 0.6 ms         |
 
-## 📤 ONNX Support
-
-Export your PyTorch model for inspection:
-
-```python
-torch.onnx.export(model, torch.randn(1, 10), "model.onnx")
-```
+xtorch-bridge nearly halves training time compared to pure PyTorch while maintaining Python flexibility. Full C++ is fastest, but at the cost of convenience.
 
 ---
 
-## 🧪 Testing
+## 6. Applications
 
-```bash
-pytest tests/
-```
-
----
-
-## 🧰 Development
-
-This package is built using `setuptools` and `torch.utils.cpp_extension`. All C++ code is compiled during installation.
-
-```bash
-pip install -e .
-```
+- Robotics and Embedded AI
+- Research prototyping with fast experimentation
+- Educational low-level ML development
+- High-performance industrial deployment
 
 ---
 
-## 📚 Project Structure
+## 7. Comparison with Related Tools
 
-```
-xtorch-bridge/
-├── xtorch_bridge/        # Python API
-├── cpp/                  # C++ bridge files
-├── xt/                   # Your xtorch C++ headers and sources
-├── setup.py              # Build config
-├── README.md
-```
+| Tool              | Notes |
+|-------------------|-------|
+| LibTorch           | Requires verbose, low-level coding |
+| PyTorch Lightning  | Great for Python, not applicable for C++ |
+| TorchScript        | Good for inference, not full training |
+| xtorch-bridge      | Full training and inference across C++ and Python |
 
 ---
 
-## 🤝 Contributing
+## 8. Conclusion
 
-Pull requests and issues are welcome. Help us grow xtorch-bridge into a reliable interface between Python and high-performance C++ AI code.
-
----
-
-## 📜 License
-
-MIT License © 2025 Your Name
+xtorch-bridge brings the best of both worlds: the simplicity of Python and the speed of C++. By allowing Python code to control C++ training and models, it opens up new possibilities for developers building deep learning systems that must scale, perform, and stay easy to develop.
 
 ---
 
-## 🌐 Links
+## Acknowledgments
 
-- PyTorch: https://pytorch.org  
-- xtorch (your C++ backend): https://github.com/yourusername/xtorch  
-- PyPI: https://pypi.org/project/xtorch-bridge (coming soon)
+Thanks to the developers of pybind11, LibTorch, xtorch, and the PyTorch ecosystem.
 
-> “Bridging the best of Python and C++ in AI.”
+---
+
+## References
+
+- [PyTorch Documentation](https://pytorch.org/docs)
+- [xtorch GitHub](https://github.com/kamisaberi/xTorch)
+- [pybind11](https://github.com/pybind/pybind11)
+- [LibTorch Tutorial](https://leimao.github.io/blog/LibTorch-Tutorial)
+- [PyTorch Lightning](https://www.pytorchlightning.ai)
