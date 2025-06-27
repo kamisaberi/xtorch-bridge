@@ -17,7 +17,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="" />
+    <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +53,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
@@ -66,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/temp" />
       <recent name="$PROJECT_DIR$/xtorch_bridge" />
     </key>
   </component>
@@ -86,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1743960556355</updated>
       <workItem from="1743960557704" duration="9434000" />
-      <workItem from="1751027857603" duration="728000" />
+      <workItem from="1751027857603" duration="1562000" />
     </task>
     <servers />
   </component>
