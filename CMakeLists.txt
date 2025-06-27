@@ -57,13 +57,13 @@ set(TEST_LIBRARIES ${CURL_LIBRARIES}
 
 # --- Build the Python Module ---
 # pybind11_add_module handles creating the Python extension module (.so or .pyd)
-pybind11_add_module(xtorch_bridge
+pybind11_add_module(xtorch_bridge_impl
         src/bindings.cpp
         src/python_data_loader_bridge.cpp
 )
 
 # Specify include directories for this target
-target_include_directories(xtorch_bridge PRIVATE
+target_include_directories(xtorch_bridge_impl PRIVATE
         # Its own public headers
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         # The public headers from pybind11
@@ -71,7 +71,7 @@ target_include_directories(xtorch_bridge PRIVATE
 )
 
 # Link the bridge against its dependencies
-target_link_libraries(xtorch_bridge PRIVATE
+target_link_libraries(xtorch_bridge_impl PRIVATE
         # The target exported by your xtorch library's install step
         ${TEST_LIBRARIES}
 #        # The torch libraries
