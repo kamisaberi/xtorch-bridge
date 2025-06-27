@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DUSE_C10D_GLOO -DUSE_C10D_NCCL -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -Dxtorch_bridge_EXPORTS
 
-CXX_INCLUDES = -I/home/kami/Documents/cpp/xtorch-bridge/include -isystem /usr/include/python3.13 -isystem /home/kami/libs/cpp/libtorch/include -isystem /home/kami/libs/cpp/libtorch/include/torch/csrc/api/include -isystem /opt/cuda/include -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/home/kami/Documents/cpp/xtorch-bridge/include -isystem /usr/include/python3.7m -isystem /home/kami/libs/cpp/libtorch/include -isystem /home/kami/libs/cpp/libtorch/include/torch/csrc/api/include -isystem /opt/cuda/include -isystem /usr/include/opencv4
 
 CXX_FLAGS = -std=gnu++17 -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -D_GLIBCXX_USE_CXX11_ABI=1
 
