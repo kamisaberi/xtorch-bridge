@@ -31,6 +31,26 @@ find_package(SndFile REQUIRED)
 find_package(onnxruntime REQUIRED)
 
 
+set(TEST_LIBRARIES ${CURL_LIBRARIES}
+        ${CURL_LIBRARIES}
+        ${TORCH_LIBRARIES}
+        ${OpenCV_LIBS}
+        ${ZLIB_LIBS}
+        ${ZIP_LIBRARIES}
+        zip
+        ${ZLIB_LIBRARIES}
+        ${LIBTAR_LIBRARY}
+        OpenSSL::SSL
+        LibLZMA::LibLZMA
+        ${LibArchive_LIBRARIES}
+        ${XTORCH_LIBRARIES}
+        xTorch::xTorch
+        OpenSSL::SSL
+        OpenSSL::Crypto
+        ZLIB::ZLIB
+        ${ONNXRUNTIME_LIBRARY}
+        onnxruntime
+)
 
 
 
