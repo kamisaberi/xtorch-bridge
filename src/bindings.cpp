@@ -19,9 +19,10 @@ void fit_from_python(
     int max_epochs,
     double lr)
 {
+    std::cout << "[BRIDGE] Entered fit_from_python." << std::flush << std::endl;
     // 1. Create C++ bridge objects that wrap the Python DataLoaders
     PythonDataLoaderBridge train_loader_bridge(train_loader_py);
-
+    std::cout << "[BRIDGE] Creating optimizer and trainer." << std::flush << std::endl;
     // Create an optional bridge for the validation loader
     std::optional<PythonDataLoaderBridge> val_loader_bridge;
     if (!val_loader_py.is_none()) {
@@ -40,12 +41,14 @@ void fit_from_python(
 
     // 4. Call the templated fit method. The compiler automatically deduces the
     //    correct template arguments for PythonDataLoaderBridge.
+    std::cout << "[BRIDGE] Calling trainer.fit()..." << std::flush << std::endl;
     trainer.fit(
         model,
         train_loader_bridge,
         val_loader_bridge.has_value() ? &(*val_loader_bridge) : nullptr, // Pass pointer or nullptr
         torch::kCPU // or torch::kCUDA
     );
+    std::cout << "[BRIDGE] trainer.fit() returned." << std::flush << std::endl;
 }
 
 // =================================================================================
