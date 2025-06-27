@@ -19,12 +19,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xtorch-bridge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xtorch-bridge.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/xtorch_bridge.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_bridge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -106,6 +103,8 @@
       <workItem from="1751027857603" duration="5832000" />
       <workItem from="1751035827842" duration="26000" />
       <workItem from="1751035858058" duration="156000" />
+      <workItem from="1751036019464" duration="5247000" />
+      <workItem from="1751056949278" duration="303000" />
     </task>
     <servers />
   </component>

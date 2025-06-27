@@ -5,7 +5,7 @@ import time
 import os
 import sys
 
-from xtorch_bridge import fit, LeNet5, Module
+# from xtorch_bridge import fit, LeNet5, Module
 # ==============================================================================
 #  STEP 1: IMPORT YOUR C++ BRIDGE
 # ==============================================================================
