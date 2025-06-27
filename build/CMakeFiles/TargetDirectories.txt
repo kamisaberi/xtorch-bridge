@@ -1,4 +1,4 @@
-/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles/xtorch_bridge.dir
+/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles/xtorch_bridge_impl.dir
 /home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles/edit_cache.dir
 /home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles/rebuild_cache.dir
 /home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles/list_install_components.dir

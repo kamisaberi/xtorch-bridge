@@ -79,6 +79,6 @@ target_link_libraries(xtorch_bridge_impl PRIVATE
 )
 
 # Optional: Add an install rule for the bridge itself
-install(TARGETS xtorch_bridge
+install(TARGETS xtorch_bridge_impl
         LIBRARY DESTINATION xtorch_bridge # Installs to <prefix>/xtorch_bridge
 )

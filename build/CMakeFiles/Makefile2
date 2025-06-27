@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/kami/Documents/cpp/xtorch-bridge/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/xtorch_bridge.dir/all
+all: CMakeFiles/xtorch_bridge_impl.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/xtorch_bridge.dir/codegen
+codegen: CMakeFiles/xtorch_bridge_impl.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/xtorch_bridge.dir/clean
+clean: CMakeFiles/xtorch_bridge_impl.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/xtorch_bridge.dir
+# Target rules for target CMakeFiles/xtorch_bridge_impl.dir
 
 # All Build rule for target.
-CMakeFiles/xtorch_bridge.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles --progress-num=1,2,3 "Built target xtorch_bridge"
-.PHONY : CMakeFiles/xtorch_bridge.dir/all
+CMakeFiles/xtorch_bridge_impl.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles --progress-num=1,2,3 "Built target xtorch_bridge_impl"
+.PHONY : CMakeFiles/xtorch_bridge_impl.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/xtorch_bridge.dir/rule: cmake_check_build_system
+CMakeFiles/xtorch_bridge_impl.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/xtorch_bridge.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/xtorch_bridge_impl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles 0
-.PHONY : CMakeFiles/xtorch_bridge.dir/rule
+.PHONY : CMakeFiles/xtorch_bridge_impl.dir/rule
 
 # Convenience name for target.
-xtorch_bridge: CMakeFiles/xtorch_bridge.dir/rule
-.PHONY : xtorch_bridge
+xtorch_bridge_impl: CMakeFiles/xtorch_bridge_impl.dir/rule
+.PHONY : xtorch_bridge_impl
 
 # codegen rule for target.
-CMakeFiles/xtorch_bridge.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target xtorch_bridge"
-.PHONY : CMakeFiles/xtorch_bridge.dir/codegen
+CMakeFiles/xtorch_bridge_impl.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/Documents/cpp/xtorch-bridge/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target xtorch_bridge_impl"
+.PHONY : CMakeFiles/xtorch_bridge_impl.dir/codegen
 
 # clean rule for target.
-CMakeFiles/xtorch_bridge.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/clean
-.PHONY : CMakeFiles/xtorch_bridge.dir/clean
+CMakeFiles/xtorch_bridge_impl.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/clean
+.PHONY : CMakeFiles/xtorch_bridge_impl.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

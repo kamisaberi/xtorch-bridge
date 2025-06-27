@@ -162,24 +162,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named xtorch_bridge
+# Target rules for targets named xtorch_bridge_impl
 
 # Build rule for target.
-xtorch_bridge: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xtorch_bridge
-.PHONY : xtorch_bridge
+xtorch_bridge_impl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xtorch_bridge_impl
+.PHONY : xtorch_bridge_impl
 
 # fast build rule for target.
-xtorch_bridge/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/build
-.PHONY : xtorch_bridge/fast
+xtorch_bridge_impl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/build
+.PHONY : xtorch_bridge_impl/fast
 
 src/bindings.o: src/bindings.cpp.o
 .PHONY : src/bindings.o
 
 # target to build an object file
 src/bindings.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/bindings.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/bindings.cpp.o
 .PHONY : src/bindings.cpp.o
 
 src/bindings.i: src/bindings.cpp.i
@@ -187,7 +187,7 @@ src/bindings.i: src/bindings.cpp.i
 
 # target to preprocess a source file
 src/bindings.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/bindings.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/bindings.cpp.i
 .PHONY : src/bindings.cpp.i
 
 src/bindings.s: src/bindings.cpp.s
@@ -195,7 +195,7 @@ src/bindings.s: src/bindings.cpp.s
 
 # target to generate assembly for a file
 src/bindings.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/bindings.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/bindings.cpp.s
 .PHONY : src/bindings.cpp.s
 
 src/python_data_loader_bridge.o: src/python_data_loader_bridge.cpp.o
@@ -203,7 +203,7 @@ src/python_data_loader_bridge.o: src/python_data_loader_bridge.cpp.o
 
 # target to build an object file
 src/python_data_loader_bridge.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/python_data_loader_bridge.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/python_data_loader_bridge.cpp.o
 .PHONY : src/python_data_loader_bridge.cpp.o
 
 src/python_data_loader_bridge.i: src/python_data_loader_bridge.cpp.i
@@ -211,7 +211,7 @@ src/python_data_loader_bridge.i: src/python_data_loader_bridge.cpp.i
 
 # target to preprocess a source file
 src/python_data_loader_bridge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/python_data_loader_bridge.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/python_data_loader_bridge.cpp.i
 .PHONY : src/python_data_loader_bridge.cpp.i
 
 src/python_data_loader_bridge.s: src/python_data_loader_bridge.cpp.s
@@ -219,7 +219,7 @@ src/python_data_loader_bridge.s: src/python_data_loader_bridge.cpp.s
 
 # target to generate assembly for a file
 src/python_data_loader_bridge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge.dir/build.make CMakeFiles/xtorch_bridge.dir/src/python_data_loader_bridge.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xtorch_bridge_impl.dir/build.make CMakeFiles/xtorch_bridge_impl.dir/src/python_data_loader_bridge.cpp.s
 .PHONY : src/python_data_loader_bridge.cpp.s
 
 # Help Target
@@ -234,7 +234,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... xtorch_bridge"
+	@echo "... xtorch_bridge_impl"
 	@echo "... src/bindings.o"
 	@echo "... src/bindings.i"
 	@echo "... src/bindings.s"
