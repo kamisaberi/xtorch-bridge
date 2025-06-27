@@ -73,9 +73,9 @@ target_include_directories(xtorch_bridge PRIVATE
 # Link the bridge against its dependencies
 target_link_libraries(xtorch_bridge PRIVATE
         # The target exported by your xtorch library's install step
-        xtorch::xtorch
-        # The torch libraries
-        ${TORCH_LIBRARIES}
+        ${TEST_LIBRARIES}
+#        # The torch libraries
+#        ${TORCH_LIBRARIES}
 )
 
 # Optional: Add an install rule for the bridge itself

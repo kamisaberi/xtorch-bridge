@@ -1,6 +1,5 @@
 #include <pybind11/pybind11.h>
-#include <xtorch/trainer.h>
-#include <xtorch/models.h> // You need to create this header
+#include <xtorch/xtorch.h>
 #include "xtorch_bridge/python_data_loader_bridge.h"
 
 namespace py = pybind11;

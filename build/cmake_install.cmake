@@ -54,7 +54,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge.cpython-37m-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge.cpython-37m-x86_64-linux-gnu.so"
-         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/kami/libs/cpp/libtorch/lib:/opt/cuda/lib:"
+         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/kami/libs/cpp/libtorch/lib:/opt/cuda/lib:/usr/local/lib:/opt/cuda/lib64:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge.cpython-37m-x86_64-linux-gnu.so")
