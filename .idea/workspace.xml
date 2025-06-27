@@ -18,9 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ctypes_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/xtorch_bridge-0.1.0-cp313-cp313-linux_x86_64.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/xtorch_bridge-0.1.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <workItem from="1751035827842" duration="26000" />
       <workItem from="1751035858058" duration="156000" />
       <workItem from="1751036019464" duration="5247000" />
-      <workItem from="1751056949278" duration="1543000" />
+      <workItem from="1751056949278" duration="4930000" />
     </task>
     <servers />
   </component>
