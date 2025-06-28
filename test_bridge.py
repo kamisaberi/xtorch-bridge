@@ -171,8 +171,9 @@ def run_inference_with_cpp_model(test_loader):
 #  MAIN EXECUTION
 # ==============================================================================
 if __name__ == '__main__':
+    print("Step 1")
     train_loader, test_loader = prepare_data_loaders()
-
+    print("Step 2")
     train_model_in_cpp(train_loader, test_loader)
 
     # This part assumes your C++ trainer successfully saved a checkpoint.
