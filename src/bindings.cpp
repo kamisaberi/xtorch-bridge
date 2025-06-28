@@ -55,7 +55,7 @@ void fit_from_python(
 // PYBIND11 MODULE DEFINITION
 // =================================================================================
 
-PYBIND11_MODULE(xtorch_bridge, m) {
+PYBIND11_MODULE(xtorch_bridge_impl, m) {
     m.doc() = "A bridge to run xtorch C++ training from Python data loaders.";
 
     // Expose your C++ model classes to Python so they can be created and passed around.

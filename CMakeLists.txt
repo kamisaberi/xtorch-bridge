@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.18)
 project(xtorch-bridge)
 
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=1)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -52,6 +54,23 @@ set(TEST_LIBRARIES ${CURL_LIBRARIES}
         onnxruntime
 )
 
+
+
+# --- RPATH Handling (THE NEW, CORRECTED PART) ---
+
+# 1. Tell CMake that we want to use the build tree's RPATH during installation.
+#    This prevents the install step from stripping the paths.
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
+# 2. Since `find_package(Torch)` was successful, the variable `Torch_LIBRARIES`
+#    contains the paths to the libraries. We can use these to build our RPATH.
+#    We will also add the path for your xTorch library explicitly.
+set(CMAKE_INSTALL_RPATH
+        "$ORIGIN"                       # Look in the same directory as the module
+        "/home/kami/libs/cpp/libtorch/lib" # The direct path to libtorch's libraries
+        "/usr/local/lib"                # The direct path to xTorch's library
+)
+message(STATUS "Setting RPATH to: ${CMAKE_INSTALL_RPATH}")
 
 
 
