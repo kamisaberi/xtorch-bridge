@@ -1,0 +1,7 @@
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/xtorch_bridge_impl.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/edit_cache.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/rebuild_cache.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/list_install_components.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/install.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/install/local.dir
+/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/install/strip.dir
