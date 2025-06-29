@@ -126,6 +126,7 @@ build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libssl.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libcrypto.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libz.so
+build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib/libnvToolsExt.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /home/kami/libs/cpp/libtorch/lib/libtorch.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /home/kami/libs/cpp/libtorch/lib/libc10_cuda.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /home/kami/libs/cpp/libtorch/lib/libc10.so

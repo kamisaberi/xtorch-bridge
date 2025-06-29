@@ -18,7 +18,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/xtorch_bridge_impl.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/xtorch_bridge_impl.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/xtorch_bridge_impl.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/xtorch_bridge_impl.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +113,7 @@
       <workItem from="1751056949278" duration="5907000" />
       <workItem from="1751131609520" duration="947000" />
       <workItem from="1751139671096" duration="14825000" />
-      <workItem from="1751227127740" duration="300000" />
+      <workItem from="1751227127740" duration="3875000" />
     </task>
     <servers />
   </component>

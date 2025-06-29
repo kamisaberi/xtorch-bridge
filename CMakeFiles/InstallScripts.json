@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kami/Documents/cpp/xtorch-bridge/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
