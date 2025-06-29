@@ -588,6 +588,9 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib/libpython3.13.so
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 
+//The directory containing a CMake configuration file for PythonLibs.
+PythonLibs_DIR:PATH=PythonLibs_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for SndFile.
 SndFile_DIR:PATH=/usr/lib/cmake/SndFile
 
@@ -839,6 +842,8 @@ CUDA_GENERATED_OUTPUT_DIR-ADVANCED:INTERNAL=1
 CUDA_GPU_DETECT_OUTPUT:INTERNAL=8.6;8.6
 //ADVANCED property for variable: CUDA_HOST_COMPILATION_CPP
 CUDA_HOST_COMPILATION_CPP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_NVCC_EXECUTABLE
+CUDA_NVCC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_NVCC_FLAGS
 CUDA_NVCC_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_NVCC_FLAGS_DEBUG

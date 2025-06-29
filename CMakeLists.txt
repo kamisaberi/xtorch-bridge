@@ -24,7 +24,10 @@ list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)
 
 
 #add_library(CUDA::nvToolsExt INTERFACE)
+#set(OpenCV_CUDA_VERSION_IGNORE_PATCH ON)
 
+set(CUDAToolkit_ROOT "/opt/cuda")
+find_package(CUDA REQUIRED)
 
 find_package(Torch REQUIRED)
 find_package(xTorch REQUIRED)
