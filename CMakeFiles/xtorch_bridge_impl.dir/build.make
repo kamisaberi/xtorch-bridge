@@ -138,10 +138,6 @@ build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_bgsegm.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_bioinspired.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_ccalib.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudabgsegm.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudafeatures2d.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudaobjdetect.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudastereo.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cvv.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_dnn_objdetect.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_dnn_superres.so.4.11.0
@@ -165,7 +161,7 @@ build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_structured_light.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_phase_unwrapping.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_superres.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudacodec.so.4.11.0
+build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_optflow.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_surface_matching.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_tracking.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_highgui.so.4.11.0
@@ -174,10 +170,6 @@ build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_text.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_videostab.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_videoio.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudaoptflow.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudalegacy.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudawarping.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_optflow.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_viz.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_wechat_qrcode.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_xfeatures2d.so.4.11.0
@@ -194,26 +186,8 @@ build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_flann.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_xphoto.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_photo.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudaimgproc.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudafilters.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_imgproc.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudaarithm.so.4.11.0
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_core.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/libopencv_cudev.so.4.11.0
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libcudart_static.a
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /usr/lib/librt.a
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppial.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppitc.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppig.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppist.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppidei.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libcublas.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libcublasLt.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libcufft.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppicc.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppif.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppim.so
-build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: /opt/cuda/lib64/libnppc.so
 build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so: CMakeFiles/xtorch_bridge_impl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared module build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xtorch_bridge_impl.dir/link.txt --verbose=$(VERBOSE)

@@ -21,14 +21,6 @@ find_package(pybind11 REQUIRED)
 # 3. Find your custom xtorch library
 
 list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)
-
-
-#add_library(CUDA::nvToolsExt INTERFACE)
-#set(OpenCV_CUDA_VERSION_IGNORE_PATCH ON)
-
-set(CUDAToolkit_ROOT "/opt/cuda")
-find_package(CUDA REQUIRED)
-
 find_package(Torch REQUIRED)
 find_package(xTorch REQUIRED)
 find_package(LibLZMA REQUIRED)
@@ -101,8 +93,8 @@ target_include_directories(xtorch_bridge_impl PRIVATE
 target_link_libraries(xtorch_bridge_impl PRIVATE
         # The target exported by your xtorch library's install step
         ${TEST_LIBRARIES}
-#        # The torch libraries
-#        ${TORCH_LIBRARIES}
+        #        # The torch libraries
+        #        ${TORCH_LIBRARIES}
 )
 
 # Optional: Add an install rule for the bridge itself

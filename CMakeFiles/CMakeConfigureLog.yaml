@@ -3338,3 +3338,1465 @@ events:
         12.8
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:32 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_138eb/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_138eb.dir/build.make CMakeFiles/cmTC_138eb.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_138eb.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_138eb.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_138eb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_138eb.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_138eb.dir/detect_cuda_version.cc.o -o cmTC_138eb  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:32 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_33f57/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_33f57.dir/build.make CMakeFiles/cmTC_33f57.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_33f57.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_33f57.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_33f57
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33f57.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_33f57.dir/detect_cuda_version.cc.o -o cmTC_33f57  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:32 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5dfd0/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_5dfd0.dir/build.make CMakeFiles/cmTC_5dfd0.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_5dfd0.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_5dfd0.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_5dfd0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dfd0.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_5dfd0.dir/detect_cuda_version.cc.o -o cmTC_5dfd0  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a08cd/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_a08cd.dir/build.make CMakeFiles/cmTC_a08cd.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_a08cd.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_a08cd.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_a08cd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a08cd.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_a08cd.dir/detect_cuda_version.cc.o -o cmTC_a08cd  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_99838/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_99838.dir/build.make CMakeFiles/cmTC_99838.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_99838.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_99838.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_99838
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99838.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_99838.dir/detect_cuda_version.cc.o -o cmTC_99838  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b49be/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_b49be.dir/build.make CMakeFiles/cmTC_b49be.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b49be.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_b49be.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_b49be
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b49be.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b49be.dir/detect_cuda_version.cc.o -o cmTC_b49be  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b89b9/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_b89b9.dir/build.make CMakeFiles/cmTC_b89b9.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b89b9.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_b89b9.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_b89b9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b89b9.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b89b9.dir/detect_cuda_version.cc.o -o cmTC_b89b9  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0d882/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_0d882.dir/build.make CMakeFiles/cmTC_0d882.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0d882.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_0d882.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_0d882
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d882.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_0d882.dir/detect_cuda_version.cc.o -o cmTC_0d882  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:25 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0870f/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_0870f.dir/build.make CMakeFiles/cmTC_0870f.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0870f.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_0870f.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_0870f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0870f.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_0870f.dir/detect_cuda_version.cc.o -o cmTC_0870f  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:25 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d759a/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_d759a.dir/build.make CMakeFiles/cmTC_d759a.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d759a.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_d759a.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_d759a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d759a.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d759a.dir/detect_cuda_version.cc.o -o cmTC_d759a  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:24 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_714aa/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_714aa.dir/build.make CMakeFiles/cmTC_714aa.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_714aa.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_714aa.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_714aa
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_714aa.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_714aa.dir/detect_cuda_version.cc.o -o cmTC_714aa  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:24 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_07aff/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_07aff.dir/build.make CMakeFiles/cmTC_07aff.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_07aff.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_07aff.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_07aff
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07aff.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_07aff.dir/detect_cuda_version.cc.o -o cmTC_07aff  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:24 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_dd419/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_dd419.dir/build.make CMakeFiles/cmTC_dd419.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_dd419.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_dd419.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_dd419
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd419.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_dd419.dir/detect_cuda_version.cc.o -o cmTC_dd419  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fc60b/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_fc60b.dir/build.make CMakeFiles/cmTC_fc60b.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fc60b.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_fc60b.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_fc60b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc60b.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_fc60b.dir/detect_cuda_version.cc.o -o cmTC_fc60b  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78e0a/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_78e0a.dir/build.make CMakeFiles/cmTC_78e0a.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_78e0a.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_78e0a.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_78e0a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78e0a.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_78e0a.dir/detect_cuda_version.cc.o -o cmTC_78e0a  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fda68/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_fda68.dir/build.make CMakeFiles/cmTC_fda68.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fda68.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_fda68.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_fda68
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fda68.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_fda68.dir/detect_cuda_version.cc.o -o cmTC_fda68  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e87ac/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_e87ac.dir/build.make CMakeFiles/cmTC_e87ac.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_e87ac.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_e87ac.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_e87ac
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87ac.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_e87ac.dir/detect_cuda_version.cc.o -o cmTC_e87ac  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e216/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_6e216.dir/build.make CMakeFiles/cmTC_6e216.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6e216.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_6e216.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_6e216
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e216.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_6e216.dir/detect_cuda_version.cc.o -o cmTC_6e216  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_869d9/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_869d9.dir/build.make CMakeFiles/cmTC_869d9.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_869d9.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_869d9.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_869d9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_869d9.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_869d9.dir/detect_cuda_version.cc.o -o cmTC_869d9  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d7b27/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_d7b27.dir/build.make CMakeFiles/cmTC_d7b27.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d7b27.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_d7b27.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_d7b27
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7b27.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d7b27.dir/detect_cuda_version.cc.o -o cmTC_d7b27  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_543f6/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_543f6.dir/build.make CMakeFiles/cmTC_543f6.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_543f6.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_543f6.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_543f6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_543f6.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_543f6.dir/detect_cuda_version.cc.o -o cmTC_543f6  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2a653/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_2a653.dir/build.make CMakeFiles/cmTC_2a653.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_2a653.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_2a653.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_2a653
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a653.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_2a653.dir/detect_cuda_version.cc.o -o cmTC_2a653  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_16bad/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_16bad.dir/build.make CMakeFiles/cmTC_16bad.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_16bad.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_16bad.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_16bad
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16bad.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_16bad.dir/detect_cuda_version.cc.o -o cmTC_16bad  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:331 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:22 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2eeaf/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_2eeaf.dir/build.make CMakeFiles/cmTC_2eeaf.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_2eeaf.dir/detect_cuda_compute_capabilities.cu.o
+        /opt/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_2eeaf.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_2eeaf.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_2eeaf.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        Linking CUDA executable cmTC_2eeaf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2eeaf.dir/link.txt --verbose=1
+        /usr/bin/g++-14 @CMakeFiles/cmTC_2eeaf.dir/objects1.rsp -o cmTC_2eeaf @CMakeFiles/cmTC_2eeaf.dir/linkLibs.rsp -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 8.6 
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:16 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b67a4/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_b67a4.dir/build.make CMakeFiles/cmTC_b67a4.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_b67a4.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_b67a4.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_b67a4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b67a4.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b67a4.dir/detect_cuda_version.cc.o -o cmTC_b67a4  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:16 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_03abb/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_03abb.dir/build.make CMakeFiles/cmTC_03abb.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_03abb.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_03abb.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_03abb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03abb.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_03abb.dir/detect_cuda_version.cc.o -o cmTC_03abb  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c6dbf/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_c6dbf.dir/build.make CMakeFiles/cmTC_c6dbf.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_c6dbf.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_c6dbf.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_c6dbf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6dbf.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_c6dbf.dir/detect_cuda_version.cc.o -o cmTC_c6dbf  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:331 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cd59/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_7cd59.dir/build.make CMakeFiles/cmTC_7cd59.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_7cd59.dir/detect_cuda_compute_capabilities.cu.o
+        /opt/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_7cd59.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_7cd59.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_7cd59.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        Linking CUDA executable cmTC_7cd59
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cd59.dir/link.txt --verbose=1
+        /usr/bin/g++-14 @CMakeFiles/cmTC_7cd59.dir/objects1.rsp -o cmTC_7cd59 @CMakeFiles/cmTC_7cd59.dir/linkLibs.rsp -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 8.6 
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4637a/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_4637a.dir/build.make CMakeFiles/cmTC_4637a.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_4637a.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_4637a.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_4637a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4637a.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_4637a.dir/detect_cuda_version.cc.o -o cmTC_4637a  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:331 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8089c/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_8089c.dir/build.make CMakeFiles/cmTC_8089c.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_8089c.dir/detect_cuda_compute_capabilities.cu.o
+        /opt/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_8089c.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_8089c.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_8089c.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        Linking CUDA executable cmTC_8089c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8089c.dir/link.txt --verbose=1
+        /usr/bin/g++-14 @CMakeFiles/cmTC_8089c.dir/objects1.rsp -o cmTC_8089c @CMakeFiles/cmTC_8089c.dir/linkLibs.rsp -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 8.6 
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a7e1e/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_a7e1e.dir/build.make CMakeFiles/cmTC_a7e1e.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_a7e1e.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_a7e1e.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_a7e1e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7e1e.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_a7e1e.dir/detect_cuda_version.cc.o -o cmTC_a7e1e  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:331 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_75aa8/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_75aa8.dir/build.make CMakeFiles/cmTC_75aa8.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_75aa8.dir/detect_cuda_compute_capabilities.cu.o
+        /opt/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_75aa8.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_75aa8.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_75aa8.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        Linking CUDA executable cmTC_75aa8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75aa8.dir/link.txt --verbose=1
+        /usr/bin/g++-14 @CMakeFiles/cmTC_75aa8.dir/objects1.rsp -o cmTC_75aa8 @CMakeFiles/cmTC_75aa8.dir/linkLibs.rsp -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 8.6 
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:99 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:24 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_53cca/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_53cca.dir/build.make CMakeFiles/cmTC_53cca.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_53cca.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/opt/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_53cca.dir/detect_cuda_version.cc.o -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_version.cc
+        Linking CXX executable cmTC_53cca
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53cca.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_53cca.dir/detect_cuda_version.cc.o -o cmTC_53cca  -Wl,-rpath,/opt/cuda/lib64 /opt/cuda/lib64/libcudart.so
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.8
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/utils.cmake:344 (cuda_select_nvcc_arch_flags)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/cuda.cmake:331 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/home/kami/libs/cpp/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:24 (find_package)"
+    directories:
+      source: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+      binary: "/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/kami/libs/cpp/libtorch/share/cmake/Caffe2;/home/kami/libs/cpp/libtorch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f7147/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_f7147.dir/build.make CMakeFiles/cmTC_f7147.dir/build
+        make[1]: Entering directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_f7147.dir/detect_cuda_compute_capabilities.cu.o
+        /opt/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_f7147.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_f7147.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /home/kami/Documents/cpp/xtorch-bridge/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_f7147.dir/detect_cuda_compute_capabilities.cu.o
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        Linking CUDA executable cmTC_f7147
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7147.dir/link.txt --verbose=1
+        /usr/bin/g++-14 @CMakeFiles/cmTC_f7147.dir/objects1.rsp -o cmTC_f7147 @CMakeFiles/cmTC_f7147.dir/linkLibs.rsp -L"/opt/cuda/targets/x86_64-linux/lib/stubs" -L"/opt/cuda/targets/x86_64-linux/lib"
+        make[1]: Leaving directory '/home/kami/Documents/cpp/xtorch-bridge/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 8.6 
+      exitCode: 0
+...

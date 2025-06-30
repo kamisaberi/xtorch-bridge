@@ -47,15 +47,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so"
-         RPATH "\$ORIGIN:/home/kami/libs/cpp/libtorch/lib:/usr/local/lib:/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/cuda/lib:/opt/cuda/lib64")
+         RPATH "\$ORIGIN:/home/kami/libs/cpp/libtorch/lib:/usr/local/lib:/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/cuda/lib")
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/xtorch_bridge" TYPE MODULE FILES "/home/kami/Documents/cpp/xtorch-bridge/build/lib.linux-x86_64-cpython-311/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so"
-         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/kami/libs/cpp/libtorch/lib:/opt/cuda/lib:/usr/local/lib:/opt/cuda/lib64::::::::"
-         NEW_RPATH "\$ORIGIN:/home/kami/libs/cpp/libtorch/lib:/usr/local/lib:/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/cuda/lib:/opt/cuda/lib64")
+         OLD_RPATH "/lib/intel64:/lib/intel64_win:/lib/win-x64:/home/kami/libs/cpp/libtorch/lib:/opt/cuda/lib:/usr/local/lib::::::::"
+         NEW_RPATH "\$ORIGIN:/home/kami/libs/cpp/libtorch/lib:/usr/local/lib:/lib/intel64:/lib/intel64_win:/lib/win-x64:/opt/cuda/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/xtorch_bridge/xtorch_bridge_impl.cpython-311-x86_64-linux-gnu.so")
     endif()

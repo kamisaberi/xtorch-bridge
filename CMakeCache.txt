@@ -131,7 +131,10 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge/C
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //No help, variable specified on the command line.
-CMAKE_LIBRARY_OUTPUT_DIRECTORY:UNINITIALIZED=/home/kami/Documents/cpp/xtorch-bridge/build/lib.linux-x86_64-cpython-311/xtorch_bridge/
+CMAKE_INSTALL_RPATH:UNINITIALIZED=/home/kami/libs/cpp/libtorch/lib:/usr/local/lib:/opt/cuda/lib64
+
+//No help, variable specified on the command line.
+CMAKE_LIBRARY_OUTPUT_DIRECTORY:UNINITIALIZED=/home/kami/Documents/cpp/xtorch-bridge/build/lib.linux-x86_64-cpython-311/xtorch_bridge
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -618,6 +621,15 @@ c10_LIBRARY:FILEPATH=/home/kami/libs/cpp/libtorch/lib/libc10.so
 //Path to a library.
 kineto_LIBRARY:FILEPATH=/home/kami/libs/cpp/libtorch/lib/libkineto.a
 
+//Value Computed by CMake
+minimal_bridge_BINARY_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
+//Value Computed by CMake
+minimal_bridge_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+minimal_bridge_SOURCE_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
 //Path to a file.
 nvtx3_dir:PATH=nvtx3_dir-NOTFOUND
 
@@ -647,6 +659,24 @@ xtorch-bridge_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 xtorch-bridge_SOURCE_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
+//Value Computed by CMake
+xtorch_bridge_BINARY_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
+//Value Computed by CMake
+xtorch_bridge_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+xtorch_bridge_SOURCE_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
+//Value Computed by CMake
+xtorch_bridge_brute_force_BINARY_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
+
+//Value Computed by CMake
+xtorch_bridge_brute_force_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+xtorch_bridge_brute_force_SOURCE_DIR:STATIC=/home/kami/Documents/cpp/xtorch-bridge
 
 
 ########################
