@@ -1,15 +1,15 @@
 # xtorch_bridge/__init__.py
-
+print("--- Importing xtorch_bridge package ---")
 try:
-    # Import the C++ functions and classes from the compiled .so file
-    from .xtorch_bridge_impl import fit, LeNet5, Module
-    print("xtorch_bridge C++ backend imported successfully!")
+    # Import the C++ functions from the compiled .so file
+    from .xtorch_bridge_impl import add_tensors
+    print("--- C++ backend 'xtorch_bridge_impl' imported successfully! ---")
 except ImportError as e:
     raise ImportError(
         "Could not import the C++ backend of xtorch_bridge. "
-        "Please ensure the package was built and installed correctly. "
-        f"Original error: {e}"
+        "This is the critical failure point. Check the error below."
+        f"\n--- Original error ---\n{e}"
     ) from e
 
 # This controls what `from xtorch_bridge import *` does
-__all__ = ["fit", "LeNet5", "Module"]
+__all__ = ["add_tensors"]

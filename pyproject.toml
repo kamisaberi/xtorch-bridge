@@ -1,9 +1,35 @@
-# This file tells pip to use the classic setuptools build system,
-# which will in turn execute our powerful setup.py script.
+# This file controls the entire Python build process.
 [build-system]
-requires = [
-    "setuptools>=61.0",
-    "cmake>=3.18",
-    "pybind11>=2.11"
-]
-build-backend = "setuptools.build_meta"
+requires = ["scikit-build-core>=0.7.0", "pybind11>=2.11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "xtorch_bridge"
+version = "1.0.0" # A valid version number
+description = "A simple C++ LibTorch extension."
+authors = [{ name = "Kami" }]
+requires-python = ">=3.11,<3.12"
+dependencies = ["torch"]
+
+# This section configures the scikit-build-core backend.
+[tool.scikit-build]
+# Tell the backend where the CMakeLists.txt file is.
+cmake.source-dir = "."
+
+# Tell the backend where the Python package files are.
+wheel.packages = ["xtorch_bridge"]
+
+# This section passes arguments to the `cmake -D` command line.
+[tool.scikit-build.cmake.define]
+# This ensures CMake finds the Python from the correct virtual environment.
+Python_EXECUTABLE = "{python_executable}"
+Python_INCLUDE_DIR = "{python_include_dir}"
+Python_LIBRARIES = "{python_library}"
+# This forces the C++ ABI to match PyTorch.
+_GLIBCXX_USE_CXX11_ABI = "1"
+
+# This section sets environment variables ONLY for the CMake process.
+# This is how we pass the path to LibTorch for find_package to work.
+# It also helps find your installed xTorch library.
+[tool.scikit-build.cmake.env]
+CMAKE_PREFIX_PATH = "ENV{LIBTORCH_PATH};/usr/local"

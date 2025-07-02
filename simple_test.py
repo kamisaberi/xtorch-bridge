@@ -1,17 +1,10 @@
-print("--- Attempting to import the local .so file ---")
+import torch
+import xtorch_bridge
 
-try:
-    # Because the .so file is in the same directory, Python can find it.
-    # We import it by its filename (without the long .cpython...so part).
-    import xtorch_bridge_impl
+print("\n--- Python: Calling C++ function ---")
+a = torch.randn(2, 3)
+b = torch.randn(2, 3)
+c = xtorch_bridge.add_tensors(a, b)
 
-    print("\nSUCCESS! The C++ module was imported successfully.")
-
-    # Let's see if we can access the functions you defined
-    print("Accessing functions from the module...")
-    print(f"  Found: {xtorch_bridge_impl.fit}")
-    print("\n--- TEST COMPLETE ---")
-
-except ImportError as e:
-    print(f"\nIMPORT FAILED. Error: {e}")
-    print("This can happen if the RPATH is not set correctly in the .so file.")
+print("Result from C++:\n", c)
+print("\nSUCCESS: The simple example works in your project structure!")
