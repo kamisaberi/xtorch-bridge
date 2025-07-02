@@ -64,7 +64,7 @@ private:
 ### Step 2: Call it from Python using xtorch-bridge
 
 ```python
-from xtorch_bridge import MLP, Trainer
+from TEMP.xtorch_bridge import MLP, Trainer
 from torchvision import datasets, transforms
 import torch
 
