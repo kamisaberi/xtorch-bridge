@@ -1,0 +1,9 @@
+# This file tells pip to use the classic setuptools build system,
+# which will in turn execute our powerful setup.py script.
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "cmake>=3.18",
+    "pybind11>=2.11"
+]
+build-backend = "setuptools.build_meta"
