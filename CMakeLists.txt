@@ -27,7 +27,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 # Define the extension module
 pybind11_add_module(xtorch_bridge
-        xtorch_bridge/torch_cpp.cpp
+        xtorch_bridge/xtorch_bridge.cpp
 )
 
 # Link against LibTorch and Python
