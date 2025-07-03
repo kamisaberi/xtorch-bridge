@@ -18,8 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1b60422-5ed5-42aa-8f50-cdfb318d741a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xtorch_bridge.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xtorch_bridge.egg-info/SOURCES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xtorch_bridge/xtorch_bridge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/xtorch_bridge/xtorch_bridge.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xtorch_bridge/xtorch_bridge.cpython-312-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/xtorch_bridge/xtorch_bridge.cpython-312-x86_64-linux-gnu.so" afterDir="false" />
     </list>
@@ -115,7 +113,7 @@
       <workItem from="1751227127740" duration="3875000" />
       <workItem from="1751235255375" duration="8867000" />
       <workItem from="1751299060862" duration="1804000" />
-      <workItem from="1751559341741" duration="10107000" />
+      <workItem from="1751559341741" duration="10463000" />
     </task>
     <servers />
   </component>

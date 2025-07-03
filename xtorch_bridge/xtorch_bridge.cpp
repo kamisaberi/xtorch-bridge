@@ -1,17 +1,19 @@
 #include <pybind11/pybind11.h>
-#include <pybind11/stl.h> // <--- THIS IS THE FIX. Add this line.
+#include <pybind11/stl.h> // For vector<Tensor> in SGDOptimizer constructor
 #include <torch/torch.h>
 #include <torch/script.h>
+
+// THIS IS THE CRUCIAL INCLUDE FOR MANUAL TENSOR CONVERSION
+#include <torch/csrc/utils/pybind.h>
+
 #include <iostream>
 #include <vector>
 #include <stdexcept>
-#include <torch/csrc/utils/pybind.h>
-
 
 namespace py = pybind11;
 
 // ============================================================================
-// C++ Optimizer
+// C++ Optimizer (Unchanged)
 // ============================================================================
 class SGDOptimizer {
 public:
@@ -58,9 +60,8 @@ private:
     std::vector<torch::Tensor> velocity_buffers_;
 };
 
-
 // ============================================================================
-// C++ Model Manager
+// C++ Model Manager (The `get_parameters` function is changed)
 // ============================================================================
 class ModelManager {
 public:
@@ -83,14 +84,24 @@ public:
         return loss.item<float>();
     }
 
-    // A method to get all the parameters from the C++ model
-    std::vector<torch::Tensor> get_parameters() {
-        // --- THE FIX IS HERE ---
-        std::vector<torch::Tensor> params_vec;
+    // --- THIS IS THE FIX ---
+    // Instead of returning a std::vector<torch::Tensor>, which causes the
+    // "unregistered type" linker error, we return a generic py::object.
+    // Inside the function, we manually build a Python list (py::list).
+    py::object get_parameters() {
+        // Create an empty Python list in C++
+        py::list params_list;
+
+        // Iterate through the C++ model parameters
         for (const auto& param : module_.parameters()) {
-            params_vec.push_back(param);
+            // For each C++ tensor, manually create a Python tensor object and
+            // append it to our Python list. This bypasses the broken automatic
+            // type caster that was causing the undefined symbol error.
+            params_list.append(torch::autograd::make_variable(param, /*requires_grad=*/false));
         }
-        return params_vec;
+
+        // Return the Python list.
+        return params_list;
     }
 
     void save(const std::string& save_path) {
@@ -102,25 +113,28 @@ private:
     torch::jit::script::Module module_;
 };
 
-
 // ============================================================================
-// PYBIND11 MODULE DEFINITION
+// PYBIND11 MODULE DEFINITION (Unchanged, it works with py::object)
 // ============================================================================
 PYBIND11_MODULE(xtorch_bridge, m) {
     m.doc() = "A more advanced C++ extension with stateful objects.";
 
+    // The SGDOptimizer binding still needs the automatic vector conversion,
+    // which works fine because it's an *input* argument, not a return value.
     py::class_<SGDOptimizer>(m, "SGDOptimizer")
         .def(py::init<std::vector<torch::Tensor>, double, double>(),
              py::arg("params"), py::arg("lr"), py::arg("momentum")=0.0)
         .def("step", &SGDOptimizer::step, "Performs a single optimization step.")
         .def("zero_grad", &SGDOptimizer::zero_grad, "Clears the gradients of all optimized tensors.");
 
+    // The ModelManager bindings are unchanged. pybind11 knows how to handle
+    // a function that returns a py::object.
     py::class_<ModelManager>(m, "ModelManager")
         .def(py::init<const std::string&>(), py::arg("model_path"))
         .def("train_batch", &ModelManager::train_batch,
              "Performs a forward and backward pass on a single batch.",
              py::arg("input"), py::arg("target"),
              py::call_guard<py::gil_scoped_release>())
-        .def("get_parameters", &ModelManager::get_parameters, "Returns a list of the model's parameters.")
+        .def("get_parameters", &ModelManager::get_parameters, "Returns a Python list of the model's parameters.")
         .def("save", &ModelManager::save, "Saves the current model state.", py::arg("save_path"));
 }

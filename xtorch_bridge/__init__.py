@@ -1,6 +1,5 @@
 # xtorch_bridge/__init__.py
 try:
-    # Import our new C++ classes
     from .xtorch_bridge import ModelManager, SGDOptimizer
     print("xtorch_bridge C++ backend imported successfully!")
 except ImportError as e:
