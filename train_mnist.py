@@ -39,6 +39,10 @@ def main():
     # Extract model parameters as NumPy arrays
     model_params = [param.detach().numpy() for param in model.parameters()]
 
+
+
+
+
     # Training loop
     for batch_idx, (data, target) in enumerate(train_loader):
         # Convert to NumPy arrays
