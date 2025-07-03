@@ -110,7 +110,7 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     }
 
     // Convert loss to NumPy array
-    auto loss_array = pybind11::array_t<float>({});
+    auto loss_array = pybind11::array_t<float>(1); // Scalar array with size 1
     auto loss_info = loss_array.request();
     *static_cast<float*>(loss_info.ptr) = loss.item<float>();
 
