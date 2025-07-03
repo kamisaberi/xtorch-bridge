@@ -1,0 +1,7 @@
+setup.py
+torch_cpp/__init__.py
+torch_cpp.egg-info/PKG-INFO
+torch_cpp.egg-info/SOURCES.txt
+torch_cpp.egg-info/dependency_links.txt
+torch_cpp.egg-info/requires.txt
+torch_cpp.egg-info/top_level.txt

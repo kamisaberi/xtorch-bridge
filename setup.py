@@ -1,11 +1,12 @@
-from setuptools import setup
+from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext
 import os
 import subprocess
+import sys
 
 class CMakeBuild(build_ext):
     def run(self):
-        libtorch_path = os.environ.get("LIBTORCH", "/path/to/libtorch")
+        libtorch_path = "/home/kami/libs/cpp/libtorch"
         if not os.path.exists(libtorch_path):
             raise RuntimeError(f"LibTorch not found at {libtorch_path}")
 
@@ -14,12 +15,25 @@ class CMakeBuild(build_ext):
 
         cmake_args = [
             f"-DCMAKE_PREFIX_PATH={libtorch_path}",
-            f"-DPYTHON_EXECUTABLE={self.distribution.executable}",
+            f"-DPYTHON_EXECUTABLE={sys.executable}",
             "-DCMAKE_BUILD_TYPE=Release",
         ]
 
-        subprocess.check_call(["cmake", ".."] + cmake_args, cwd=build_dir)
-        subprocess.check_call(["cmake", "--build", ".", "--config", "Release"], cwd=build_dir)
+        # Try to get pybind11 CMake directory
+        try:
+            pybind11_cmake_dir = subprocess.check_output(
+                [sys.executable, "-c", "import pybind11; print(pybind11.get_cmake_dir())"],
+                text=True
+            ).strip()
+            cmake_args.append(f"-Dpybind11_DIR={pybind11_cmake_dir}")
+        except subprocess.CalledProcessError:
+            print("Warning: Could not find pybind11 CMake directory via Python. Relying on CMake to find pybind11.")
+
+        try:
+            subprocess.check_call(["cmake", ".."] + cmake_args, cwd=build_dir)
+            subprocess.check_call(["cmake", "--build", ".", "--config", "Release"], cwd=build_dir)
+        except subprocess.CalledProcessError as e:
+            raise RuntimeError(f"CMake failed: {e}")
 
         # Copy the built module to the package directory
         for ext in self.extensions:

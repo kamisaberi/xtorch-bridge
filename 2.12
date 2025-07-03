@@ -1,0 +1,9 @@
+Collecting pybind11
+  Using cached pybind11-2.13.6-py3-none-any.whl.metadata (9.5 kB)
+Using cached pybind11-2.13.6-py3-none-any.whl (243 kB)
+Installing collected packages: pybind11
+  Attempting uninstall: pybind11
+    Found existing installation: pybind11 2.13.6
+    Uninstalling pybind11-2.13.6:
+      Successfully uninstalled pybind11-2.13.6
+Successfully installed pybind11-2.13.6
