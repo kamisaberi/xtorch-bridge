@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.18)
 project(xtorch_bridge LANGUAGES CXX)
 
+#add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+
 # Find Python
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
 

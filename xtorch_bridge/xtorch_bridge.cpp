@@ -1,14 +1,17 @@
 #include <pybind11/pybind11.h>
+#include <pybind11/stl.h> // <--- THIS IS THE FIX. Add this line.
 #include <torch/torch.h>
 #include <torch/script.h>
 #include <iostream>
 #include <vector>
 #include <stdexcept>
+#include <torch/csrc/utils/pybind.h>
+
 
 namespace py = pybind11;
 
 // ============================================================================
-// CAPABILITY 1: A C++ Optimizer
+// C++ Optimizer
 // ============================================================================
 class SGDOptimizer {
 public:
@@ -57,43 +60,39 @@ private:
 
 
 // ============================================================================
-// CAPABILITY 2: A C++ Model Manager
+// C++ Model Manager
 // ============================================================================
 class ModelManager {
 public:
-    // Constructor loads the model and keeps it in C++ memory
     ModelManager(const std::string& model_path) {
         try {
             module_ = torch::jit::load(model_path);
-            module_.train(); // Set to training mode
+            module_.train();
             std::cout << "[C++] Model loaded from " << model_path << " into C++ memory." << std::endl;
         } catch (const c10::Error& e) {
             throw std::runtime_error("Error loading model: " + std::string(e.what()));
         }
     }
 
-    // The training function now only needs data and target
-    // It returns the loss as a float
     float train_batch(const torch::Tensor& input_tensor, const torch::Tensor& target_tensor) {
-        // The forward/backward pass logic
         std::vector<torch::jit::IValue> inputs = {input_tensor};
         auto output = module_.forward(inputs).toTensor();
-
-        // Ensure target is the correct type (int64)
         auto target_long = target_tensor.to(torch::kLong);
-
         auto loss = torch::nll_loss(torch::log_softmax(output, 1), target_long);
         loss.backward();
-
         return loss.item<float>();
     }
 
     // A method to get all the parameters from the C++ model
     std::vector<torch::Tensor> get_parameters() {
-        return module_.parameters();
+        // --- THE FIX IS HERE ---
+        std::vector<torch::Tensor> params_vec;
+        for (const auto& param : module_.parameters()) {
+            params_vec.push_back(param);
+        }
+        return params_vec;
     }
 
-    // A method to save the model state from C++
     void save(const std::string& save_path) {
         module_.save(save_path);
         std::cout << "[C++] Model state saved to " << save_path << std::endl;
@@ -107,23 +106,21 @@ private:
 // ============================================================================
 // PYBIND11 MODULE DEFINITION
 // ============================================================================
-PYBIND11_MODULE(xtorch_bridge_impl, m) {
+PYBIND11_MODULE(xtorch_bridge, m) {
     m.doc() = "A more advanced C++ extension with stateful objects.";
 
-    // Expose the C++ SGDOptimizer class to Python
     py::class_<SGDOptimizer>(m, "SGDOptimizer")
         .def(py::init<std::vector<torch::Tensor>, double, double>(),
              py::arg("params"), py::arg("lr"), py::arg("momentum")=0.0)
         .def("step", &SGDOptimizer::step, "Performs a single optimization step.")
         .def("zero_grad", &SGDOptimizer::zero_grad, "Clears the gradients of all optimized tensors.");
 
-    // Expose the C++ ModelManager class to Python
     py::class_<ModelManager>(m, "ModelManager")
         .def(py::init<const std::string&>(), py::arg("model_path"))
         .def("train_batch", &ModelManager::train_batch,
              "Performs a forward and backward pass on a single batch.",
              py::arg("input"), py::arg("target"),
-             py::call_guard<py::gil_scoped_release>()) // Release GIL during this call
+             py::call_guard<py::gil_scoped_release>())
         .def("get_parameters", &ModelManager::get_parameters, "Returns a list of the model's parameters.")
         .def("save", &ModelManager::save, "Saves the current model state.", py::arg("save_path"));
 }
