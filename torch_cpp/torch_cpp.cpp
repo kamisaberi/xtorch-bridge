@@ -36,15 +36,30 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     params.reserve(model_params.size());
     for (const auto& param : model_params) {
         auto param_info = param.request();
-        std::vector<int64_t> shape(param_info.shape, param_info.shape + param_info.ndim);
+        std::vector<int64_t> shape;
+        shape.reserve(param_info.ndim);
+        for (pybind11::ssize_t i = 0; i < param_info.ndim; ++i) {
+            shape.push_back(static_cast<int64_t>(param_info.shape[i]));
+        }
         params.push_back(torch::from_blob(param_info.ptr, shape, torch::kFloat32).clone().set_requires_grad(true));
     }
 
     // Convert input and target to torch::Tensor
     auto input_info = input.request();
+    std::vector<int64_t> input_shape;
+    input_shape.reserve(input_info.ndim);
+    for (pybind11::ssize_t i = 0; i < input_info.ndim; ++i) {
+        input_shape.push_back(static_cast<int64_t>(input_info.shape[i]));
+    }
+    torch::Tensor input_tensor = torch::from_blob(input_info.ptr, input_shape, torch::kFloat32);
+
     auto target_info = target.request();
-    torch::Tensor input_tensor = torch::from_blob(input_info.ptr, {input_info.shape[0], input_info.shape[1], input_info.shape[2], input_info.shape[3]}, torch::kFloat32);
-    torch::Tensor target_tensor = torch::from_blob(target_info.ptr, {target_info.shape[0]}, torch::kInt64);
+    std::vector<int64_t> target_shape;
+    target_shape.reserve(target_info.ndim);
+    for (pybind11::ssize_t i = 0; i < target_info.ndim; ++i) {
+        target_shape.push_back(static_cast<int64_t>(target_info.shape[i]));
+    }
+    torch::Tensor target_tensor = torch::from_blob(target_info.ptr, target_shape, torch::kInt64);
 
     // LeNet architecture: conv1 -> relu -> maxpool -> conv2 -> relu -> maxpool -> flatten -> fc1 -> relu -> fc2 -> relu -> fc3
     torch::Tensor x = input_tensor; // [batch_size, 1, 28, 28]
@@ -62,7 +77,7 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     x = torch::linear(x, params[8], params[9]); // fc3: [batch_size, 10]
 
     // Compute cross-entropy loss
-    torch::Tensor loss = torch::nll_loss2d(torch::log_softmax(x, 1), target_tensor);
+    torch::Tensor loss = torch::nll_loss(torch::log_softmax(x, 1), target_tensor);
 
     // Backward pass
     loss.backward();
