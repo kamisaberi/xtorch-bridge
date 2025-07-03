@@ -37,7 +37,7 @@ class CMakeBuild(build_ext):
 
         # Copy the built module to the package directory
         for ext in self.extensions:
-            module_path = os.path.join(build_dir, "torch_cpp", self.get_ext_filename(ext.name))
+            module_path = os.path.join(build_dir, self.get_ext_filename(ext.name))  # Changed to build/ directory
             self.copy_file(module_path, os.path.join("torch_cpp", self.get_ext_filename(ext.name)))
 
 setup(
