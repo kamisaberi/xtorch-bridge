@@ -1,11 +1,10 @@
 #include <pybind11/pybind11.h>
-#include <pybind11/stl.h>    // For Python list to std::vector conversion
-#include <pybind11/numpy.h>  // For torch::Tensor conversion via NumPy
+#include <pybind11/stl.h>
+#include <pybind11/numpy.h>
 #include <torch/torch.h>
 #include <torch/script.h>
 #include <vector>
-
-
+#include <stdexcept>
 
 std::vector<float> matrix_multiply(const std::vector<float>& a, const std::vector<float>& b, int rows_a, int cols_a, int cols_b) {
     torch::Tensor tensor_a = torch::from_blob(const_cast<float*>(a.data()), {rows_a, cols_a}, torch::kFloat32);
@@ -120,7 +119,6 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     return std::make_tuple(loss_array, grad_arrays);
 }
 
-
 std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> train_model(
     const std::string& model_path,
     const pybind11::array_t<float>& input,
@@ -129,22 +127,35 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     torch::jit::script::Module module;
     try {
         module = torch::jit::load(model_path);
-        module.eval(); // Ensure evaluation mode
+        module.train(); // Enable training mode for gradient computation
     } catch (const c10::Error& e) {
-        throw std::runtime_error("Error loading the model: " + std::string(e.what()));
+        throw std::runtime_error("Error loading model from " + model_path + ": " + e.what());
     }
 
     // Convert input to torch::Tensor
     auto input_info = input.request();
+    if (input_info.ndim != 4) {
+        throw std::runtime_error("Input must be 4D [batch_size, 1, 28, 28], got " +
+            std::to_string(input_info.ndim) + " dimensions");
+    }
     std::vector<int64_t> input_shape;
     input_shape.reserve(input_info.ndim);
     for (pybind11::ssize_t i = 0; i < input_info.ndim; ++i) {
         input_shape.push_back(static_cast<int64_t>(input_info.shape[i]));
     }
+    if (input_shape[1] != 1 || input_shape[2] != 28 || input_shape[3] != 28) {
+        throw std::runtime_error("Input shape must be [batch_size, 1, 28, 28], got [" +
+            std::to_string(input_shape[0]) + "," + std::to_string(input_shape[1]) + "," +
+            std::to_string(input_shape[2]) + "," + std::to_string(input_shape[3]) + "]");
+    }
     torch::Tensor input_tensor = torch::from_blob(input_info.ptr, input_shape, torch::kFloat32).clone().set_requires_grad(true);
 
     // Convert target to torch::Tensor (cast from float to int64_t)
     auto target_info = target.request();
+    if (target_info.ndim != 1) {
+        throw std::runtime_error("Target must be 1D [batch_size], got " +
+            std::to_string(target_info.ndim) + " dimensions");
+    }
     std::vector<int64_t> target_shape;
     target_shape.reserve(target_info.ndim);
     for (pybind11::ssize_t i = 0; i < target_info.ndim; ++i) {
@@ -154,6 +165,10 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     float* target_ptr = static_cast<float*>(target_info.ptr);
     for (size_t i = 0; i < target_info.size; ++i) {
         target_data[i] = static_cast<int64_t>(target_ptr[i]);
+        if (target_data[i] < 0 || target_data[i] > 9) {
+            throw std::runtime_error("Target value at index " + std::to_string(i) +
+                " is " + std::to_string(target_data[i]) + ", must be in [0, 9]");
+        }
     }
     torch::Tensor target_tensor = torch::from_blob(target_data.data(), target_shape, torch::kInt64);
 
@@ -162,30 +177,51 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
 
     // Forward pass
     std::vector<torch::jit::IValue> inputs = {input_tensor};
-    torch::Tensor output = module.forward(inputs).toTensor();
+    torch::Tensor output;
+    try {
+        output = module.forward(inputs).toTensor();
+        if (output.dim() != 2 || output.size(1) != 10) {
+            throw std::runtime_error("Output shape must be [batch_size, 10], got [" +
+                std::to_string(output.size(0)) + "," + std::to_string(output.size(1)) + "]");
+        }
+    } catch (const c10::Error& e) {
+        throw std::runtime_error("Forward pass failed: " + std::string(e.what()));
+    }
 
     // Compute loss
-    torch::Tensor loss = torch::nll_loss(torch::log_softmax(output, 1), target_tensor);
+    torch::Tensor loss;
+    try {
+        loss = torch::nll_loss(torch::log_softmax(output, 1), target_tensor);
+    } catch (const c10::Error& e) {
+        throw std::runtime_error("Loss computation failed: " + std::string(e.what()));
+    }
 
     // Backward pass
-    loss.backward();
+    try {
+        loss.backward();
+    } catch (const c10::Error& e) {
+        throw std::runtime_error("Backward pass failed: " + std::string(e.what()));
+    }
+
+    // Re-acquire GIL after computations
+    pybind11::gil_scoped_acquire acquire_gil;
 
     // Collect gradients
     std::vector<pybind11::array_t<float>> grad_arrays;
-    for (const auto& param : module.parameters()) {
+    auto parameters = module.parameters();
+    grad_arrays.reserve(parameters.size());
+    for (const auto& param : parameters) {
         torch::Tensor grad = param.grad();
-        auto grad_array = pybind11::array_t<float>(std::vector<ssize_t>(grad.sizes().begin(), grad.sizes().end()));
+        std::vector<ssize_t> grad_shape(param.sizes().begin(), param.sizes().end()); // Use param shape if grad undefined
+        auto grad_array = pybind11::array_t<float>(grad_shape);
         auto grad_info = grad_array.request();
-        if (grad.defined() && grad.numel() > 0) {
+        if (grad.defined() && grad.numel() > 0 && grad.sizes() == param.sizes()) {
             std::memcpy(grad_info.ptr, grad.data_ptr<float>(), grad.numel() * sizeof(float));
         } else {
             std::fill_n(static_cast<float*>(grad_info.ptr), grad_info.size, 0.0f);
         }
         grad_arrays.push_back(grad_array);
     }
-
-    // Re-acquire GIL after computations
-    pybind11::gil_scoped_acquire acquire_gil;
 
     // Convert loss to NumPy array
     auto loss_array = pybind11::array_t<float>(1); // Scalar array with size 1
@@ -195,8 +231,6 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     return std::make_tuple(loss_array, grad_arrays);
 }
 
-
-
 PYBIND11_MODULE(torch_cpp, m) {
     m.def("matrix_multiply", &matrix_multiply, "Perform matrix multiplication using LibTorch",
           pybind11::arg("a"), pybind11::arg("b"), pybind11::arg("rows_a"), pybind11::arg("cols_a"), pybind11::arg("cols_b"));
@@ -205,5 +239,5 @@ PYBIND11_MODULE(torch_cpp, m) {
     m.def("train_lenet", &train_lenet, "Train LeNet on a batch of MNIST data",
           pybind11::arg("model_params"), pybind11::arg("input"), pybind11::arg("target"));
     m.def("train_model", &train_model, "Train a TorchScript model on a batch of data",
-              pybind11::arg("model_path"), pybind11::arg("input"), pybind11::arg("target"));
+          pybind11::arg("model_path"), pybind11::arg("input"), pybind11::arg("target"));
 }
