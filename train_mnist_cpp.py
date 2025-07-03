@@ -5,6 +5,7 @@ import torchvision.transforms as transforms
 import torch_cpp
 import numpy as np
 
+
 # Define SimpleCNN for parameter management (same as create_model.py)
 class SimpleCNN(nn.Module):
     def __init__(self):
@@ -23,6 +24,7 @@ class SimpleCNN(nn.Module):
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
         return x
+
 
 def main():
     # Load MNIST dataset
@@ -66,6 +68,7 @@ def main():
             break
 
     print("Training completed!")
+
 
 if __name__ == "__main__":
     main()
