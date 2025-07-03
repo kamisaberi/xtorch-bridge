@@ -2,7 +2,10 @@
 #include <pybind11/stl.h>    // For Python list to std::vector conversion
 #include <pybind11/numpy.h>  // For torch::Tensor conversion via NumPy
 #include <torch/torch.h>
+#include <torch/script.h>
 #include <vector>
+
+
 
 std::vector<float> matrix_multiply(const std::vector<float>& a, const std::vector<float>& b, int rows_a, int cols_a, int cols_b) {
     torch::Tensor tensor_a = torch::from_blob(const_cast<float*>(a.data()), {rows_a, cols_a}, torch::kFloat32);
@@ -117,6 +120,83 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     return std::make_tuple(loss_array, grad_arrays);
 }
 
+
+std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> train_model(
+    const std::string& model_path,
+    const pybind11::array_t<float>& input,
+    const pybind11::array_t<float>& target) {
+    // Load the TorchScript model
+    torch::jit::script::Module module;
+    try {
+        module = torch::jit::load(model_path);
+        module.eval(); // Ensure evaluation mode
+    } catch (const c10::Error& e) {
+        throw std::runtime_error("Error loading the model: " + std::string(e.what()));
+    }
+
+    // Convert input to torch::Tensor
+    auto input_info = input.request();
+    std::vector<int64_t> input_shape;
+    input_shape.reserve(input_info.ndim);
+    for (pybind11::ssize_t i = 0; i < input_info.ndim; ++i) {
+        input_shape.push_back(static_cast<int64_t>(input_info.shape[i]));
+    }
+    torch::Tensor input_tensor = torch::from_blob(input_info.ptr, input_shape, torch::kFloat32).clone().set_requires_grad(true);
+
+    // Convert target to torch::Tensor (cast from float to int64_t)
+    auto target_info = target.request();
+    std::vector<int64_t> target_shape;
+    target_shape.reserve(target_info.ndim);
+    for (pybind11::ssize_t i = 0; i < target_info.ndim; ++i) {
+        target_shape.push_back(static_cast<int64_t>(target_info.shape[i]));
+    }
+    std::vector<int64_t> target_data(target_info.size);
+    float* target_ptr = static_cast<float*>(target_info.ptr);
+    for (size_t i = 0; i < target_info.size; ++i) {
+        target_data[i] = static_cast<int64_t>(target_ptr[i]);
+    }
+    torch::Tensor target_tensor = torch::from_blob(target_data.data(), target_shape, torch::kInt64);
+
+    // Release GIL for forward and backward pass
+    pybind11::gil_scoped_release no_gil;
+
+    // Forward pass
+    std::vector<torch::jit::IValue> inputs = {input_tensor};
+    torch::Tensor output = module.forward(inputs).toTensor();
+
+    // Compute loss
+    torch::Tensor loss = torch::nll_loss(torch::log_softmax(output, 1), target_tensor);
+
+    // Backward pass
+    loss.backward();
+
+    // Collect gradients
+    std::vector<pybind11::array_t<float>> grad_arrays;
+    for (const auto& param : module.parameters()) {
+        torch::Tensor grad = param.grad();
+        auto grad_array = pybind11::array_t<float>(std::vector<ssize_t>(grad.sizes().begin(), grad.sizes().end()));
+        auto grad_info = grad_array.request();
+        if (grad.defined() && grad.numel() > 0) {
+            std::memcpy(grad_info.ptr, grad.data_ptr<float>(), grad.numel() * sizeof(float));
+        } else {
+            std::fill_n(static_cast<float*>(grad_info.ptr), grad_info.size, 0.0f);
+        }
+        grad_arrays.push_back(grad_array);
+    }
+
+    // Re-acquire GIL after computations
+    pybind11::gil_scoped_acquire acquire_gil;
+
+    // Convert loss to NumPy array
+    auto loss_array = pybind11::array_t<float>(1); // Scalar array with size 1
+    auto loss_info = loss_array.request();
+    *static_cast<float*>(loss_info.ptr) = loss.item<float>();
+
+    return std::make_tuple(loss_array, grad_arrays);
+}
+
+
+
 PYBIND11_MODULE(torch_cpp, m) {
     m.def("matrix_multiply", &matrix_multiply, "Perform matrix multiplication using LibTorch",
           pybind11::arg("a"), pybind11::arg("b"), pybind11::arg("rows_a"), pybind11::arg("cols_a"), pybind11::arg("cols_b"));
@@ -124,4 +204,6 @@ PYBIND11_MODULE(torch_cpp, m) {
           pybind11::arg("model_params"), pybind11::arg("input"));
     m.def("train_lenet", &train_lenet, "Train LeNet on a batch of MNIST data",
           pybind11::arg("model_params"), pybind11::arg("input"), pybind11::arg("target"));
+    m.def("train_model", &train_model, "Train a TorchScript model on a batch of data",
+              pybind11::arg("model_path"), pybind11::arg("input"), pybind11::arg("target"));
 }
