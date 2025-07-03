@@ -1,11 +1,11 @@
 import torch
 import torch.nn as nn
-import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 import torch_cpp
 import numpy as np
 
+# Define LeNet architecture (for reference)
 class LeNet(nn.Module):
     def __init__(self):
         super(LeNet, self).__init__()
@@ -16,9 +16,11 @@ class LeNet(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
     def forward(self, x):
-        x = torch.relu(torch.max_pool2d(self.conv1(x), 2))
-        x = torch.relu(torch.max_pool2d(self.conv2(x), 2))
-        x = x.view(-1, 16 * 5 * 5)
+        x = torch.relu(self.conv1(x))
+        x = torch.max_pool2d(x, 2)
+        x = torch.relu(self.conv2(x))
+        x = torch.max_pool2d(x, 2)
+        x = x.view(x.size(0), -1)
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
         x = self.fc3(x)
@@ -27,41 +29,39 @@ class LeNet(nn.Module):
 def main():
     # Load MNIST dataset
     transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True)
+    train_dataset = torchvision.datasets.MNIST(root='./data', train=True, transform=transform, download=True)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=64, shuffle=True)
 
-    # Initialize LeNet model and optimizer
+    # Initialize LeNet model
     model = LeNet()
-    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
-    # Training loop (1 epoch for simplicity)
-    model.train()
-    for batch_idx, (data, target) in enumerate(trainloader):
-        # Get model parameters as NumPy arrays
-        model_params = [p.detach().numpy() for p in model.parameters()]  # [conv1.w, conv1.b, conv2.w, conv2.b, fc1.w, fc1.b, fc2.w, fc2.b, fc3.w, fc3.b]
+    # Extract model parameters as NumPy arrays
+    model_params = [param.detach().numpy() for param in model.parameters()]
 
-        # Convert data and target to NumPy arrays
-        data_np = data.numpy()  # [batch_size, 1, 28, 28]
-        target_np = target.numpy()  # [batch_size]
+    # Training loop
+    for batch_idx, (data, target) in enumerate(train_loader):
+        # Convert to NumPy arrays
+        data_np = data.numpy()
+        target_np = target.numpy().astype(np.int64)  # Ensure target is int64
 
-        # Call C++ function
+        # Call C++ training function
         loss_np, grad_np = torch_cpp.train_lenet(model_params, data_np, target_np)
 
-        # Convert loss and gradients back to torch.Tensor
-        loss = torch.tensor(loss_np.item())
-        gradients = [torch.from_numpy(g) for g in grad_np]
-
         # Update model parameters with gradients
-        with torch.no_grad():
-            for param, grad in zip(model.parameters(), gradients):
-                param.grad = grad
-            optimizer.step()
-            optimizer.zero_grad()
+        for i, param in enumerate(model.parameters()):
+            param.grad = torch.from_numpy(grad_np[i])
+            model_params[i] = param.detach().numpy()  # Update model_params for next iteration
 
-        if batch_idx % 100 == 0:
-            print(f"Batch {batch_idx}, Loss: {loss.item():.4f}")
+        # PyTorch optimizer step
+        optimizer.step()
+        optimizer.zero_grad()
 
-        if batch_idx >= 200:  # Limit for quick testing
+        # Print loss
+        print(f'Batch {batch_idx}, Loss: {loss_np.item():.4f}')
+
+        # For demonstration, stop after a few batches
+        if batch_idx >= 200:
             break
 
     print("Training completed!")

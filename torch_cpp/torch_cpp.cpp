@@ -44,7 +44,7 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
         params.push_back(torch::from_blob(param_info.ptr, shape, torch::kFloat32).clone().set_requires_grad(true));
     }
 
-    // Convert input and target to torch::Tensor
+    // Convert input to torch::Tensor
     auto input_info = input.request();
     std::vector<int64_t> input_shape;
     input_shape.reserve(input_info.ndim);
@@ -53,13 +53,22 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
     }
     torch::Tensor input_tensor = torch::from_blob(input_info.ptr, input_shape, torch::kFloat32);
 
+    // Convert target to torch::Tensor (cast from float to int64_t)
     auto target_info = target.request();
     std::vector<int64_t> target_shape;
     target_shape.reserve(target_info.ndim);
     for (pybind11::ssize_t i = 0; i < target_info.ndim; ++i) {
         target_shape.push_back(static_cast<int64_t>(target_info.shape[i]));
     }
-    torch::Tensor target_tensor = torch::from_blob(target_info.ptr, target_shape, torch::kInt64);
+    std::vector<int64_t> target_data(target_info.size);
+    float* target_ptr = static_cast<float*>(target_info.ptr);
+    for (size_t i = 0; i < target_info.size; ++i) {
+        target_data[i] = static_cast<int64_t>(target_ptr[i]);
+    }
+    torch::Tensor target_tensor = torch::from_blob(target_data.data(), target_shape, torch::kInt64);
+
+    // Release GIL for forward and backward pass
+    pybind11::gil_scoped_release no_gil;
 
     // LeNet architecture: conv1 -> relu -> maxpool -> conv2 -> relu -> maxpool -> flatten -> fc1 -> relu -> fc2 -> relu -> fc3
     torch::Tensor x = input_tensor; // [batch_size, 1, 28, 28]
@@ -81,6 +90,9 @@ std::tuple<pybind11::array_t<float>, std::vector<pybind11::array_t<float>>> trai
 
     // Backward pass
     loss.backward();
+
+    // Re-acquire GIL after computations
+    pybind11::gil_scoped_acquire acquire_gil;
 
     // Collect gradients
     std::vector<pybind11::array_t<float>> grad_arrays;
