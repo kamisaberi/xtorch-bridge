@@ -31,15 +31,15 @@ pybind11_add_module(xtorch_bridge
 )
 
 # Link against LibTorch and Python
-target_link_libraries(torch_cpp PRIVATE "${TORCH_LIBRARIES}")
+target_link_libraries(xtorch_bridge PRIVATE "${TORCH_LIBRARIES}")
 
 # Set C++ standard
-set_target_properties(torch_cpp PROPERTIES
+set_target_properties(xtorch_bridge PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
 )
 
 # Install the module to the xtorch_bridge package directory
-install(TARGETS torch_cpp
+install(TARGETS xtorch_bridge
         LIBRARY DESTINATION xtorch_bridge
 )

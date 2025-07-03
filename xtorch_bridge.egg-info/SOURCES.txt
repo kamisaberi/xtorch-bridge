@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+xtorch_bridge/__init__.py
+xtorch_bridge.egg-info/PKG-INFO
+xtorch_bridge.egg-info/SOURCES.txt
+xtorch_bridge.egg-info/dependency_links.txt
+xtorch_bridge.egg-info/requires.txt
+xtorch_bridge.egg-info/top_level.txt
