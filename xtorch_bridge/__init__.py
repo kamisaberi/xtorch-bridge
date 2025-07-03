@@ -1,3 +1,12 @@
-from .torch_cpp import matrix_multiply, forward_pass, train_lenet, train_model
+# xtorch_bridge/__init__.py
+try:
+    # Import our new C++ classes
+    from .xtorch_bridge import ModelManager, SGDOptimizer
+    print("xtorch_bridge C++ backend imported successfully!")
+except ImportError as e:
+    raise ImportError(
+        "Could not import the C++ backend of xtorch_bridge. "
+        f"Original error:\n{e}"
+    ) from e
 
-__all__ = ["matrix_multiply", "forward_pass", "train_lenet", "train_model"]
+__all__ = ["ModelManager", "SGDOptimizer"]
