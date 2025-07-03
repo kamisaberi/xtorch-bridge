@@ -38,15 +38,15 @@ class CMakeBuild(build_ext):
         # Copy the built module to the package directory
         for ext in self.extensions:
             module_path = os.path.join(build_dir, self.get_ext_filename(ext.name))  # Changed to build/ directory
-            self.copy_file(module_path, os.path.join("torch_cpp", self.get_ext_filename(ext.name)))
+            self.copy_file(module_path, os.path.join("xtorch_bridge", self.get_ext_filename(ext.name)))
 
 setup(
-    name="torch_cpp",
+    name="xtorch_bridge",
     version="0.1.0",
     description="A simple Python package to run LibTorch C++ code",
-    ext_modules=[Extension("torch_cpp", [])],  # Empty sources, handled by CMake
+    ext_modules=[Extension("xtorch_bridge", [])],  # Empty sources, handled by CMake
     cmdclass={"build_ext": CMakeBuild},
-    packages=["torch_cpp"],
-    package_dir={"torch_cpp": "torch_cpp"},
+    packages=["xtorch_bridge"],
+    package_dir={"xtorch_bridge": "xtorch_bridge"},
     install_requires=["pybind11>=2.12"],
 )

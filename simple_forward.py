@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import torch_cpp
+import xtorch_bridge
 import numpy as np
 
 def main():
@@ -19,7 +19,7 @@ def main():
     input_np = input_data.numpy()
 
     # Call C++ function
-    output_np = torch_cpp.forward_pass(model_params, input_np)
+    output_np = xtorch_bridge.forward_pass(model_params, input_np)
 
     # Convert output back to torch.Tensor for comparison
     output = torch.from_numpy(output_np)
@@ -27,7 +27,7 @@ def main():
     # Verify by running the same computation in Python
     expected_output = model(input_data)
 
-    print("C++ Output (from torch_cpp.forward_pass):")
+    print("C++ Output (from xtorch_bridge.forward_pass):")
     print(output_np)
     print("\nExpected Output (from PyTorch):")
     print(expected_output.detach().numpy())

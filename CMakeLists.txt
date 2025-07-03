@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.18)
-project(torch_cpp LANGUAGES CXX)
+project(xtorch_bridge LANGUAGES CXX)
 
 # Find Python
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
@@ -26,8 +26,8 @@ find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 # Define the extension module
-pybind11_add_module(torch_cpp
-        torch_cpp/torch_cpp.cpp
+pybind11_add_module(xtorch_bridge
+        xtorch_bridge/torch_cpp.cpp
 )
 
 # Link against LibTorch and Python
@@ -39,7 +39,7 @@ set_target_properties(torch_cpp PROPERTIES
         CXX_STANDARD_REQUIRED ON
 )
 
-# Install the module to the torch_cpp package directory
+# Install the module to the xtorch_bridge package directory
 install(TARGETS torch_cpp
-        LIBRARY DESTINATION torch_cpp
+        LIBRARY DESTINATION xtorch_bridge
 )

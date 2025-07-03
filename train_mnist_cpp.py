@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torchvision
 import torchvision.transforms as transforms
-import torch_cpp
+import xtorch_bridge
 import numpy as np
 
 
@@ -46,7 +46,7 @@ def main():
         target_np = target.numpy().astype(np.int64)  # Ensure target is int64
 
         # Call C++ training function
-        loss_np, grad_np = torch_cpp.train_model(model_path, data_np, target_np)
+        loss_np, grad_np = xtorch_bridge.train_model(model_path, data_np, target_np)
 
         # Update model parameters with gradients
         for i, param in enumerate(model.parameters()):
